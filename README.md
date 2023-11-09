@@ -1,6 +1,11 @@
 # Shiny App Guides & Checklists
 Hello and Congratulations! You are here because you are developing a cool R shiny app. This repository was built to help guide you along the process and get your app deployed as quickly as possible. 
 
+
+## Standard Checklist
+The following checklist contains the core checks performed on all apps. If you have specific app issues such as "optimization" or "styling", please see the other markdown files in this repo. 
+
+
 ### Local Development Checklist
 This is the stage where you are developing the app or perhaps you and another analyst are working together on it. You have not yet shown the app to managers/stakeholders. 
 
@@ -39,5 +44,6 @@ These are the final checks before publishing the "production" or "stable" versio
 - [ ] The app does not reference any files on the LAN, or cloud. All local files are in the app folder. Any other data is queried via an ODBC or DBI connection.
 - [ ] All service accounts related to the app have least privilege access. 
 - [ ] The app, if applicable, contains both State of Utah and OSA branding. This includes the header bars, footers, etc. The only reason and time this can be omited is when the app is being embedded in another site that has the branding.
+- [ ] If deploying via our shinyproxy server, then ensure the shinyproxy server's application.yaml file has been updated to include the app under the specs. On a related note, ensure that the newest version of the docker image has been pulled onto the server from the container registry.
 - [ ] The app is served in under 5 seconds, unless there is an accepted reason for taking longer. 
 - [ ] If applicable, Subdomain is registered and networking record requests are completed.
